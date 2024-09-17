@@ -1,14 +1,12 @@
-import static java.lang.Math.abs;
-
 public class RaiseToPower {
   public static void main(String[] args) {
 
-    double base = 5;
+    double base = 5.0;
     int exponent = 6;
     double result1 = Math.pow(base, exponent);
 
     double result2 = 1;
-    for (int i = 0; i < abs(exponent); i++) {
+    for (int i = 0; i < Math.abs(exponent); i++) {
       result2 *= base;
     }
 
