@@ -20,19 +20,19 @@ public Shoe(String type, String color,String brand, double size) {
     this.size = size;
   }
 
-  public String gettype() {
+  public String getType() {
     return type;
   }
 
-  public String getcolor() {
+  public String getColor() {
     return color;
   }
 
-  public String getbrand() {
+  public String getBrand() {
     return brand;
   }
 
-  public double getsize(){
+  public double getSize(){
     return size;}
 
   /**

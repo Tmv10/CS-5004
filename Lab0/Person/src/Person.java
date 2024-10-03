@@ -1,20 +1,20 @@
 /**
- * This class represents a person The person has a first name, last name and an
- * year of birth
+ * This class represents a person The person has a first name, last name and year of birth
  */
-class Person {
+public class Person {
+
   private String firstName;
   private String lastName;
-
 
 
   private int yearOfBirth;
 
   /**
-   * Constructs a Person object and initializes it
-   * to the given first name, last name and year of birth
-   * @param firstName the first name of this person
-   * @param lastName the last name of this person
+   * Constructs a Person object and initializes it to the given first name, last name and year of
+   * birth
+   *
+   * @param firstName   the first name of this person
+   * @param lastName    the last name of this person
    * @param yearOfBirth the year of birth of this person
    */
 
@@ -26,6 +26,7 @@ class Person {
 
   /**
    * Get the first name of this person
+   *
    * @return the first name of this person
    */
   public String getFirstName() {
@@ -34,6 +35,7 @@ class Person {
 
   /**
    * Return the last name of this person
+   *
    * @return the last name of this person
    */
 
@@ -43,6 +45,7 @@ class Person {
 
   /**
    * Return the year of birth of this person
+   *
    * @return the year of birth of this person
    */
   public int getYearOfBirth() {
@@ -50,26 +53,24 @@ class Person {
   }
 
   /**
-   Returns a string representation of this person with first
-   and last name
-   @return a formatted string
+   * Returns a string representation of this person with first and last name
+   *
+   * @return a formatted string
    */
 
   public String toString() {
-    return "" + firstName  + " " + lastName;
+    return firstName + " " + lastName;
   }
 
   /**
-   * check if this person is the same
-   * as the person in the argument.
-   * two persons are the same iff they
-   * have the same first and last names
-   * and the same years of birth
+   * check if this person is the same as the person in the argument. two persons are the same iff
+   * they have the same first and last names and the same years of birth
+   *
    * @param other the other person to be compared to
    * @return true if this person is the same as other, false otherwise
    */
   public boolean same(Person other) {
-    return  this.firstName.equals(other.firstName)
+    return this.firstName.equals(other.firstName)
         && this.lastName.equals(other.lastName)
         && this.yearOfBirth == other.yearOfBirth;
   }
