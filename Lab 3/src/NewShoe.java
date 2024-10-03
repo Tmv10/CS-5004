@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
- * JUnit test class for shoes
+ * This Class represents shoes
  */
 public class NewShoe {
   // Instance variables representing the shoe's attributes
@@ -35,20 +35,20 @@ public class NewShoe {
     }
     this.size = size;
   }
-  // Getter method for the type of the shoe
+  /**Getter method for the type of the shoe */
   public String getType() {
     return type;
   }
-  // Getter method for the color of the shoe
+  /** Getter method for the color of the shoe*/
   public Color getColor() {
     return color;
   }
 
-  // Getter method for the brand of the shoe
+  /** Getter method for the brand of the shoe*/
   public String getBrand() {
     return brand;
   }
-  // Getter method for the size of the shoe
+  /** Getter method for the size of the shoe */
   public double getSize(){
     return size;}
 
@@ -65,8 +65,6 @@ public class NewShoe {
 
   public String toString() {
     String colorStr;// Variable to hold the string representation of the color
-
-    // Switch case to determine the string representation of the color
     switch (this.color) {
       case RED:
         colorStr = "RED";

@@ -1,8 +1,13 @@
-import static org.junit.jupiter.api.Assertions.*;// Importing assertions for unit tests
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-
-import org.junit.jupiter.api.BeforeEach;// Importing annotation for setup method
-import org.junit.jupiter.api.Test;// Importing annotation for test methods
+/**
+ * Unit tests for the NewShoe class.
+ * This class tests the functionality of the NewShoe class by
+ * validating constructor behavior and ensuring getter methods return
+ * the correct values.
+ */
 
 public class NewShoeTest {
 
@@ -17,45 +22,67 @@ public class NewShoeTest {
     newShoe2 = new NewShoe("Boot", Color.BLUE, "Adidas", 9.0);
   }
 
+
+  /**
+   * Tests the constructor of NewShoe class to ensure it throws
+   * IllegalArgumentException when invalid parameters are provided.
+   */
   @Test
   public void testConstructor() {
-    // Test that the constructor throws an exception for an empty type
     assertThrows(IllegalArgumentException.class, () ->
         new NewShoe("", Color.GREEN, "Puma", 8));
     assertThrows(IllegalArgumentException.class, () ->
         new NewShoe("", Color.BLUE, "Adidas", 9.0));
   }
 
+  /**
+   * Tests the getColor method to ensure it returns the correct color
+   * of the shoe.
+   */
   @Test
   public void testGetColor() {
-    // Test that the getColor method returns the correct color
     assertEquals(Color.RED, newShoe.getColor());
     assertEquals(Color.BLUE, newShoe2.getColor());
   }
+
+  /**
+   * Tests the getType method to ensure it returns the correct type
+   * of the shoe.
+   */
   @Test
   public void testGetType() {
-    // Test that the getType method returns the correct type
     assertEquals("Sneaker", newShoe.getType());
     assertEquals("Boot", newShoe2.getType());
   }
 
+  /**
+   * Tests the getBrand method to ensure it returns the correct brand
+   * of the shoe.
+   */
   @Test
   public void testGetBrand() {
-    // Test that the getBrand method returns the correct brand
     assertEquals("Nike", newShoe.getBrand());
     assertEquals("Adidas", newShoe2.getBrand());
   }
 
+
+  /**
+   * Tests the getSize method to ensure it returns the correct size
+   * of the shoe. Includes a delta for comparing double values.
+   */
   @Test
   public void testGetSize() {
-    // Test that the getSize method returns the correct size
     assertEquals(10.5, newShoe.getSize(), 0.01);
     assertEquals(9.0, newShoe2.getSize(), 0.01);  // Added delta for double comparison
   }
 
+
+  /**
+   * Tests the toString method to ensure it returns the correct string
+   * representation of the NewShoe object.
+   */
   @Test
   public void testToString() {
-    // Expected string representations of the NewShoe objects
     String expected1 = "Type: Sneaker\nColor: RED\nBrand: Nike\nSize: 10.50";
     String expected2 = "Type: Boot\nColor: BLUE\nBrand: Adidas\nSize: 9.00";
     assertEquals(expected1, newShoe.toString());

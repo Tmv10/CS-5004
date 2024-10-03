@@ -1,6 +1,8 @@
-// Enum representing different colors
+/**
+ * Enum representing different colors that a NewShoe can have.
+ * Each enum constant corresponds to a specific color.
+ */
 public enum Color {
-  // Enum constants representing available colors
   RED ,
   BLUE,
   GREEN,
