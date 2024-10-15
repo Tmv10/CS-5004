@@ -82,6 +82,7 @@ public class ListOfIntsTest {
     // Insert at the end
     list = list.insertAtIndex(4, 3);
     assertEquals(4, list.getDataAtIndex(3));
+
   }
 
   /**
@@ -117,6 +118,8 @@ public class ListOfIntsTest {
     list = list.append(3);
 
     assertEquals(3, list.getCountClassic());
+    list = list.append(4);
+    assertEquals(4, list.getCountClassic());
   }
 
   /**
@@ -129,7 +132,11 @@ public class ListOfIntsTest {
     list = list.append(2);
     list = list.append(3);
 
-    assertEquals(3, list.getCountWithHelper());
+    assertEquals(3, list.getCountWithHelper()); // Count should be 3 after appending 1, 2, 3
+    // Add more elements and check the updated count
+    list = list.append(4).append(5);
+    assertEquals(5, list.getCountWithHelper());  // Count should now be 5 after adding 4, 5
+
   }
 
 
@@ -143,7 +150,8 @@ public class ListOfIntsTest {
     list = list.append(2);
     list = list.append(3);
 
-    assertEquals(6, list.getSum());
+    assertEquals(6, list.getSum());// Sum of 1 + 2 + 3
+    assertNotEquals(0, list.getSum()); // Ensure the sum is not zero
   }
 
   /**
@@ -156,6 +164,7 @@ public class ListOfIntsTest {
 
     // Try accessing index 5 which is out of bounds for a list of size 3
     assertThrows(IndexOutOfBoundsException.class, () -> list.getDataAtIndex(5));
+    assertEquals(3, list.getCountClassic());
   }
 
   /**
@@ -178,7 +187,9 @@ public class ListOfIntsTest {
     ListOfInts list = new EmptyNode().append(1).append(2);
     list = list.append(3);
 
-    assertEquals(3, list.getDataAtIndex(2));  // Check that the appended value is at the end
+    assertEquals(3, list.getDataAtIndex(2)); // Check that the appended value is at the end
+    assertEquals(3, list.getCountClassic());// Ensure list length is correct
+
   }
 
   /**
@@ -201,6 +212,11 @@ public class ListOfIntsTest {
     ListOfInts list = new EmptyNode();
 
     assertEquals(0, list.getSum());  // Sum of an empty list should be 0
+
+    // Adding an element and check again
+    list = list.append(5);
+    assertEquals(5, list.getSum());  // Sum should now be 5 after adding one element
+
   }
 
   /**
@@ -223,7 +239,16 @@ public class ListOfIntsTest {
     list = list.append(1).append(2).append(3).append(4).append(5);
 
     assertEquals(5, list.getCountClassic());  // Should count all 5 elements
+
+    // Check that the elements are correctly stored
+    assertEquals(1, list.getDataAtIndex(0));
+    assertEquals(2, list.getDataAtIndex(1));
+    assertEquals(3, list.getDataAtIndex(2));
+    assertEquals(4, list.getDataAtIndex(3));
+    assertEquals(5, list.getDataAtIndex(4));
+
   }
+
 }
 
 
