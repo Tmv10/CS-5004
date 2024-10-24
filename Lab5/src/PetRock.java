@@ -107,7 +107,9 @@ public class PetRock {
     PetRock other = (PetRock) obj;
     return this.name != null && this.name.equals(other.name) &&
         this.happiness == other.happiness &&
-        Math.abs(this.mass - other.mass) < 0.001;
+        Math.abs(this.mass - other.mass) < 0.0001;
+    // Double.compare(this.mass, other.mass) == 0
+
   }
 
 

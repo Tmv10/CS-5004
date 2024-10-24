@@ -28,7 +28,7 @@ public class PetRockTest {
   public void setUp() {
     rock1 = new PetRock("Rocky", 5.123);
     rock2 = new PetRock("Rocky", 5.123);
-    rock3 = new PetRock("Rocky", 5.125); // Slightly different mass
+    rock3 = new PetRock("Rocky", 5.124); // Slightly different mass
     rock4 = new PetRock("Boulder", 5.123); // Different name
   }
 

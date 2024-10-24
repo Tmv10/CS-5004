@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="272ed5ba-1b1d-42b3-a3a0-13900147bb07" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab 3.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test/NewShoeTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Color.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewShoe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Shoe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Shoe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab0/Person/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab0/Person/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Lab0/Person/src/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab0/Person/src/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab0/Addint/src/AddTwoInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab0/Addint/src/AddTwoInt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lab0/Hello/src/Hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lab0/Hello/src/Hello.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +138,12 @@
       <workItem from="1727984973477" duration="6219000" />
       <workItem from="1727995175175" duration="11000" />
       <workItem from="1727995214969" duration="47000" />
+      <workItem from="1729542068389" duration="3000" />
+      <workItem from="1729542080902" duration="4000" />
+      <workItem from="1729542186154" duration="616000" />
+      <workItem from="1729567619860" duration="6000" />
+      <workItem from="1729751198480" duration="16000" />
+      <workItem from="1729751286987" duration="8000" />
     </task>
     <servers />
   </component>
