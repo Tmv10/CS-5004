@@ -65,7 +65,7 @@ The need for secure user data handling provides an opportunity to implement auth
 The application's notification and reminder system offers a perfect use case for implementing scheduled tasks and background processes using Java's built-in concurrency features and Spring's @Scheduled functionality, demonstrating threading concepts without excessive complexity.
 
 Cons:
-While avoiding the complexity of external APIs, you'll still need to learn relatively complex Java frameworks like Spring Boot, Spring Data JPA, and possibly Spring Security, which might require significant upfront learning time depending on your current expertise.
+While avoiding the complexity of external APIs, there is still a need to learn relatively complex Java frameworks like Spring Boot, Spring Data JPA, and possibly Spring Security, which might require significant upfront learning time depending on your current expertise.
 Creating accurate cycle prediction algorithms and implementing them in Java requires understanding of mathematical probability and statistics concepts, potentially adding a challenging learning curve that might not directly contribute to demonstrating OOP principles.
 Building a responsive and user-friendly interface would likely require learning a frontend framework (like JavaFX for desktop or integrating with a web framework), adding another layer of complexity that could detract from focusing on core Java and OOP concepts.
 Implementing proper unit testing and integration testing using JUnit, Mockito, and other testing frameworks requires significant additional learning and setup time, though these are essential for a professional-grade Java application.
