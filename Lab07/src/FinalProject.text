@@ -1,0 +1,140 @@
+Restaurant recommendation for a confused group (IndeCisive or LastBite Standing)
+A mobile application designed to solve the common problem of group dining indecision. The app streamlines the restaurant selection process by transforming potential disagreements into a structured decision-making game. For example, when a group of three can't decide where to eat, each member inputs their dining preferences (such as cuisine type). The app then generates four restaurant recommendations that best accommodate these varied preferences. Through a unique elimination process, each group member gets to veto one restaurant from the suggestions. The remaining restaurant becomes the group's final dining destination, ensuring a fair and engaging selection process. This system not only makes the decision-making process more efficient but also adds an element of fun while maintaining group harmony.
+
+Pros:
+- The app presents an excellent opportunity to demonstrate the Observer pattern for real-time group decisions, where each participant's actions (like vetoing a restaurant) need to be immediately reflected to all group members, showcasing advanced OOP design pattern implementation.
+- The project allows for rich inheritance hierarchies through different types of preference filters (PricePreference, CuisinePreference, LocationPreference) and restaurant ranking algorithms (GroupMatchScore, IndividualPreference, ConsensusBuilder), demonstrating strong understanding of class inheritance and polymorphism.
+- The voting/veto system provides a perfect scenario to implement the State pattern, tracking the decision-making process through different states (Gathering Preferences → Generating Options → Voting → Final Decision), showing sophisticated OOP state management.
+- The system naturally demonstrates encapsulation through user profiles, group sessions, and preference management, where internal data structures and algorithms can be effectively hidden while exposing clean interfaces for interaction.
+- The recommendation algorithm can showcase interface segregation and dependency injection through different scoring strategies (IScoring, IRecommendation, IPreferenceMatching), demonstrating SOLID principles in a real-world context.
+
+Cons:
+- Managing real-time group state synchronization through OOP requires careful consideration of concurrency issues, which can become complex when dealing with multiple users vetoing restaurants simultaneously.
+- Creating a flexible yet maintainable preference matching system using inheritance might lead to a complex class hierarchy that could be difficult to modify as new preference types or matching algorithms are added.
+- Implementing the restaurant filtering and scoring system purely through OOP principles might result in numerous small classes and interfaces, potentially overcomplicating what could be simpler algorithmic solutions.
+- The need to maintain group session state and handle disconnections/reconnections requires complex object lifecycle management, which can be challenging to implement cleanly while adhering to OOP principles.
+- Designing a clean inheritance hierarchy for different types of groups (casual groups, scheduled events, recurring groups) while maintaining code reusability could lead to deep inheritance chains that might be harder to maintain and test.
+
+
+Work on Final Projects
+1. PROJECT NAME (5 points)
+LastBite Standing
+
+ 2. TEAM MEMBERS (5 points)
+Sibgha Ahmad
+Taniya Mary Varghese
+Henny Guiesso
+
+3. PROBLEM TO BE SOLVED (about 3 sentences, 10 points)
+Group decision-making for restaurant selection often leads to circular discussions and social friction, wasting time and potentially damaging group dynamics. Current solutions either lack structure or fail to make the process engaging for all participants. The "LastBite Standing" app transforms this common pain point into an interactive game that ensures fair participation while reaching a decisive outcome.
+
+ 4. PROJECT MOTIVATION (why you want to work on this problem, 10 points)
+We have frequently encountered the "where should we eat?" dilemma, therefore, we want to create a solution that makes the decision-making process both fair and fun. By gamifying the selection process, we can eliminate the social pressure of direct vetoes while ensuring everyone's preferences are considered. By having everyone use one phone, it becomes more social and interactive, like a digital party game, while still solving a real problem. It's also a great opportunity to create a practical app that doesn't require complex networking or multi-device synchronization.
+
+ 5. TECHNICAL APPROACH (1 paragraph, 15 points)
+The application will be built using solid Object-Oriented Programming principles in Java, emphasizing clean architecture through abstraction, inheritance, polymorphism, and encapsulation. The application will be built using object-oriented principles in Java, focusing on a clear progression of states: location selection, preference collection, and the veto process. The location functionality uses the Strategy pattern to handle different location services (GPS, manual search) and the State pattern for game flow. The system starts with location selection (either current GPS location or manual search) which becomes a prerequisite for restaurant recommendations. After location is confirmed, the app follows the preference collection and veto process. Repository pattern handles location-based restaurant data fetching, while Observer pattern keeps the UI updated with location and game state changes.
+
+ 6. TOOLS/FRAMEWORKS NEEDED (10 points)
+Java (primary programming language, for OOP implementation)
+Android SDK (mobile development)
+Google Play Services Location API (for accurate location services)
+Geocoding API (for location search and address lookup)
+Places API (location-based restaurant data)
+SQLite (local storage for restaurant/location cache)
+JUnit & Mockito (testing OOP components)
+Gradle (build system)
+Android Studio (IDE)
+SOLID Principles Linter
+Android Architecture Components (ViewModel, LiveData)
+Spring boot ?
+Google Maps SDK (for location visualization)
+
+7. DELIVERY PLATFORM (Laptop text IO, Laptop GUI, Android Emulator, Web Page, Other; 10 points)
+Android Emulator for development and testing. If time allows, we hope to deploy to actual Android devices through the Google Play Store.
+
+ 8. RISK FACTORS (10 points) -- things you may need to learn along the way or uncertainties in design
+a)Location Permission Handling: Android requires explicit user permission to access the device location. We will need to understand Android's permission system
+-How to request permissions from users
+-Handling cases where users deny permissions
+-Different types of location permissions (fine vs coarse)
+b)GPS and Location Accuracy as GPS signals can be unreliable or inaccurate. We will need to learn location technologies
+-How GPS works in mobile devices
+-Alternative location methods (network, Wi-Fi)
+-How to determine location accuracy
+c)Google's APIs (Maps, Places) have usage limits and costs. We will need to understand API management
+-How to obtain and use API keys
+-Cost structure of Google APIs
+-How to implement caching to reduce API calls
+-Rate limiting and quota management
+d)Restaurant data needs to be current and location-relevant. We must understand data management
+-How to store restaurant data locally
+-When to update cached data
+-Managing data freshness
+-SQLite database operations
+e)The App needs the internet for restaurant data but might not always have connection. We will need to learn the following:
+-How to check network connectivity
+-Implementing offline functionality
+-Handling network timeouts and errors
+-Caching data for offline use
+f)Restaurant data needs to be current and location-relevant. We must understand data management
+-How to store restaurant data locally
+-When to update cached data
+-Managing data freshness
+-SQLite database operations
+h)Many possible UI states are based on location/permissions/data. We need to know Android UI development
+-Activity and Fragment lifecycle
+-Handling configuration changes (rotation)
+-State preservation
+-Error message display
+i)Location features are hard to test therefore we need to figure out how we will be testing frameworks
+-How to mock location services
+-Writing tests for GPS functionality
+-Simulating different locations
+-Testing error conditions
+j)As mentioned, multiple things can go wrong with location services. We need to make sure we handle all errors. Types of location errors
+-How to recover from errors
+-Providing user feedback
+-Implementing fallback options
+
+9. VERY INFORMAL ARCHITECTURE AND DESIGN DIAGRAMS (MVC or similar; Class Diagram(s), 15 points)
+    This can be very informal, phone picture of sheet of paper, hand-drawn on tablet, or similar.
+
+/****************** LastBite Standing - MVC Architecture ******************\
+
++----------------+        (1)         +------------------+       (2)        +---------------+
+|     MODEL      | <----------------- |    CONTROLLER    | <--------------- |     VIEW      |
+|                | -----------------> |                  | --------------> |               |
++----------------+        (4)         +------------------+       (3)        +---------------+
+        |                                     |                                    |
+        |                                     |                                    |
+        v                                     v                                    v
++----------------+                  +------------------+                  +---------------+
+|   Restaurant   |                  | GameController   |                  | MainActivity  |
+|- id: String    |                  |+ startGame()     |                  |+ onCreate()   |
+|- name: String  |                  |+ handleVote()    |                  |+ updateUI()   |
+|- location      |                  |+ endGame()       |                  |+ showError()  |
+|- rating: Float |                  |                  |                  |               |
++----------------+                  +------------------+                  +---------------+
+        |                                     |                                    |
+        v                                     v                                    v
++----------------+                  +------------------+                  +---------------+
+| GameSession    |                  | LocationCtrl     |                  | GameFragment |
+|- players       |                  |+ getLocation()   |                  |+ display()   |
+|- restaurants   |                  |+ searchLocation()|                  |+ showVotes() |
+|- currentRound  |                  |+ validate()      |                  |+ updateUI()  |
++----------------+                  +------------------+                  +---------------+
+        |                                     |                                    |
+        v                                     v                                    v
++----------------+                  +------------------+                  +---------------+
+| Location       |                  | RestaurantCtrl   |                  | ResultFragmnt|
+|- latitude      |                  |+ fetchNearby()   |                  |+ showWinner()|
+|- longitude     |                  |+ filterResults() |                  |+ showStats() |
+|- address       |                  |+ sortByRating()  |                  |               |
++----------------+                  +------------------+                  +---------------+
+
+10. FIVE EXAMPLES OF 5004 "BIG IDEAS" TO BE ILLUSTRATED (10 points)
+Modularity: Each component has a single responsibility
+Extensibility: New features can be added without modifying existing code
+Maintainability: Clear class hierarchies and encapsulation
+Testability: Interfaces and abstractions enable effective unit testing
+Flexibility: Different implementations can be swapped out easily
