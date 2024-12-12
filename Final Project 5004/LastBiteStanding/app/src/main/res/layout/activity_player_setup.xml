@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player Setup"
+            android:textSize="24sp"
+            android:textColor="@color/dark_green"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/numPlayersInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number of Players (2-10)"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/confirmPlayersBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Players"
+            android:backgroundTint="@color/dark_green"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:id="@+id/playerInputsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <Button
+            android:id="@+id/startGameBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Game"
+            android:backgroundTint="@color/dark_green"
+            android:visibility="gone"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
