@@ -1,0 +1,72 @@
+Team Members: Sibgha Ahmad, Taniya Mary Varghese, Henny Gueisso
+Brainstorming
+Restaurant recommendation for a confused group (IndeCisive or LastBite Standing)
+A mobile application designed to solve the common problem of group dining indecision.
+The app streamlines the restaurant selection process by transforming potential disagreements into a structured decision-making game.
+For example, when a group of three can't decide where to eat, each member inputs their dining preferences (such as cuisine type).
+The app then generates four restaurant recommendations that best accommodate these varied preferences.
+Through a unique elimination process, each group member gets to veto one restaurant from the suggestions.
+The remaining restaurant becomes the group's final dining destination, ensuring a fair and engaging selection process.
+This system not only makes the decision-making process more efficient but also adds an element of fun while maintaining group harmony.
+
+Pros:
+The app presents an excellent opportunity to demonstrate the Observer pattern for real-time group decisions, where each participant's actions (like vetoing a restaurant) need to be immediately reflected to all group members, showcasing advanced OOP design pattern implementation.
+The project allows for rich inheritance hierarchies through different types of preference filters (PricePreference, CuisinePreference, LocationPreference) and restaurant ranking algorithms (GroupMatchScore, IndividualPreference, ConsensusBuilder), demonstrating strong understanding of class inheritance and polymorphism.
+The voting/veto system provides a perfect scenario to implement the State pattern, tracking the decision-making process through different states (Gathering Preferences → Generating Options → Voting → Final Decision), showing sophisticated OOP state management.
+The system naturally demonstrates encapsulation through user profiles, group sessions, and preference management, where internal data structures and algorithms can be effectively hidden while exposing clean interfaces for interaction.
+The recommendation algorithm can showcase interface segregation and dependency injection through different scoring strategies (IScoring, IRecommendation, IPreferenceMatching), demonstrating SOLID principles in a real-world context.
+
+
+
+Cons:
+Managing real-time group state synchronization through OOP requires careful consideration of concurrency issues, which can become complex when dealing with multiple users vetoing restaurants simultaneously.
+Creating a flexible yet maintainable preference matching system using inheritance might lead to a complex class hierarchy that could be difficult to modify as new preference types or matching algorithms are added.
+Implementing the restaurant filtering and scoring system purely through OOP principles might result in numerous small classes and interfaces, potentially overcomplicating what could be simpler algorithmic solutions.
+The need to maintain group session state and handle disconnections/reconnections requires complex object lifecycle management, which can be challenging to implement cleanly while adhering to OOP principles.
+Designing a clean inheritance hierarchy for different types of groups (casual groups, scheduled events, recurring groups) while maintaining code reusability could lead to deep inheritance chains that might be harder to maintain and test.
+
+
+Movie Recommendation App in Java
+This cross-platform movie recommendation system bridges the gap between streaming services by analyzing users' viewing patterns across Netflix, Amazon Prime, and other platforms to suggest content that pushes their entertainment boundaries while staying within their comfort zone.
+Unlike traditional recommendation engines that suggest more of what you already watch, this app deliberately introduces users to different genres while maintaining familiar elements they enjoy – for instance, recommending a true crime documentary to a reality TV fan due to shared elements like real-world drama and personal narratives.
+The app leverages API integrations with major streaming platforms to build a comprehensive viewing profile, employs machine learning to identify subtle patterns in content consumption, and uses a sophisticated matching algorithm to find cross-genre content that contains familiar storytelling elements, pacing, and emotional hooks that align with the user's established preferences.
+This "familiar but different" approach helps users discover new content categories without straying too far from their entertainment comfort zone, effectively expanding their viewing horizons while maintaining engagement.
+
+
+
+Pros
+The project provides an excellent opportunity to demonstrate complex inheritance hierarchies through different types of media content (Movies, TV Shows, Documentaries) and recommendation strategies (GenreBasedRecommender, ViewingHistoryRecommender, CrossGenreRecommender), showcasing deep understanding of OOP inheritance and polymorphism.
+The system naturally lends itself to implementing multiple design patterns – for example, Observer pattern for user preference updates, Factory pattern for creating different types of recommendations, Strategy pattern for different recommendation algorithms, and Singleton for managing API connections, which are all highly valued OOP concepts.
+The project allows demonstration of encapsulation and data hiding through well-structured user profiles, viewing histories, and preference management classes, showing how to properly protect and manage sensitive user data using Java's access modifiers and getter/setter methods.
+Building interfaces for different streaming platform integrations (IStreamingPlatform, IRecommendationEngine) showcases interface segregation and dependency injection, fundamental OOP principles that greatly impress in technical interviews.
+The project enables implementation of abstract classes and methods for handling different types of content analysis and recommendation algorithms, demonstrating solid understanding of abstraction principles and when to use abstract classes versus interfaces.
+Cons
+The complexity of creating proper OOP hierarchies for recommendations and content types might over-complicate the initial development phase, potentially delaying the delivery of a working prototype compared to a simpler procedural approach.
+Creating interfaces and abstractions for each streaming platform API will require significant upfront design effort to ensure the architecture remains flexible enough to accommodate new platforms while maintaining OOP principles.
+Implementing proper exception handling and error management across the inheritance hierarchy requires careful planning and extensive try-catch blocks, which could make the code more verbose and potentially harder to maintain if not designed correctly.
+The need to maintain strict OOP principles might lead to deep inheritance hierarchies (especially in content classification and recommendation systems), which could make the system more rigid and harder to modify as requirements change.
+Unit testing becomes more complex with deep OOP hierarchies and multiple interfaces, requiring extensive mocking and test class hierarchies to properly test all inheritance and polymorphism scenarios.
+
+
+
+Period App (MenstruFit)
+This holistic health tracking application uniquely combines menstrual cycle awareness with lifestyle optimization, utilizing Java's robust object-oriented architecture to create personalized wellness recommendations.
+The app tracks menstrual cycles while simultaneously monitoring users' hydration levels and exercise routines, then leverages this data to provide phase-specific recommendations for optimal health.
+For example, during the luteal phase when users might experience water retention, the app adjusts daily hydration goals and suggests specific types of exercises that align with hormonal changes, such as lower-intensity workouts.
+During the follicular phase, when energy levels typically peak, the app might recommend increasing exercise intensity and adjusting hydration needs for more active routines.
+The system uses historical data to learn each user's unique patterns, adapting its recommendations to account for individual cycle lengths, symptoms, and lifestyle factors.
+This creates a comprehensive wellness assistant that not only tracks cycles but actively helps users optimize their daily routines by aligning their hydration, exercise, and other lifestyle choices with their natural hormonal rhythms.
+
+Pros:
+The project offers an ideal opportunity to demonstrate core Java concepts and Spring Boot fundamentals through well-structured data models (User, CycleData, HydrationLog, ExerciseRecord), making it an excellent choice for showcasing Java proficiency without requiring extensive external API integrations or complex third-party tools.
+The data-driven nature of the application allows for practical implementation of Java Collections Framework and Stream API for data processing (analyzing cycle patterns, calculating averages, generating reports), which are crucial elements in Java programming assessments and technical interviews.
+The project naturally incorporates database interactions using JPA/Hibernate with clear entity relationships (one-to-many relationship between User and CycleData, many-to-many between Activities and CyclePhases), demonstrating database design skills while staying within standard Java frameworks.
+The need for secure user data handling provides an opportunity to implement authentication and authorization using Spring Security, showcasing important enterprise Java skills without venturing into overly complex security scenarios.
+The application's notification and reminder system offers a perfect use case for implementing scheduled tasks and background processes using Java's built-in concurrency features and Spring's @Scheduled functionality, demonstrating threading concepts without excessive complexity.
+
+Cons:
+While avoiding the complexity of external APIs, there is still a need to learn relatively complex Java frameworks like Spring Boot, Spring Data JPA, and possibly Spring Security, which might require significant upfront learning time depending on your current expertise.
+Creating accurate cycle prediction algorithms and implementing them in Java requires understanding of mathematical probability and statistics concepts, potentially adding a challenging learning curve that might not directly contribute to demonstrating OOP principles.
+Building a responsive and user-friendly interface would likely require learning a frontend framework (like JavaFX for desktop or integrating with a web framework), adding another layer of complexity that could detract from focusing on core Java and OOP concepts.
+Implementing proper unit testing and integration testing using JUnit, Mockito, and other testing frameworks requires significant additional learning and setup time, though these are essential for a professional-grade Java application.
+Setting up a proper development environment with all necessary tools (IDE configuration, Maven/Gradle build system, database management, version control) can be time-consuming for beginners and requires learning several supporting technologies beyond just Java.
